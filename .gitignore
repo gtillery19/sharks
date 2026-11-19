@@ -3,3 +3,6 @@
 /*_files/
 
 **/*.quarto_ipynb
+
+/*_cache/
+data/attacks.rds

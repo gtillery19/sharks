@@ -10,7 +10,7 @@ library(maps)
 
 ```{r}
 #| cache: true
-attacks <- read_csv("data/attacks_clean.csv") |>
+attacks <- read_csv("data/attacks_clean.csv", show_col_types = FALSE) |>
   mutate(
     Country_lower = str_to_lower(str_trim(Country)),
     Fatal_clean = case_when(
@@ -42,7 +42,3 @@ world |>
   theme_void()
 ```
 
-```{r}
-attacks |>
-  count(Fatal_clean)
-```
